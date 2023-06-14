@@ -1,7 +1,4 @@
 .cards {
-  padding-top: 40px;
-}
-.card {
   display: flex;
   border-radius: 10px;
   flex-direction: column;
@@ -16,7 +13,10 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(282px, max-content));
   grid-gap: 20px 17px;
-  padding: 0;
+  padding-top: 40px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
   margin: 0;
 }
 .card__image {

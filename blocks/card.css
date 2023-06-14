@@ -10,13 +10,11 @@
   width: 282px;
 }
 
-.card__list {
+.card__gallery {
   width: 100%;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(282px, max-content));
-  /*grid-template-columns: repeat(auto-fill, 282px);*/
-  /* grid-template-columns: repeat(3, minmax(min-content, max-content)); */
   grid-gap: 20px 17px;
   padding: 0;
   margin: 0;

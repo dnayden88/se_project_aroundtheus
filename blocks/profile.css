@@ -21,8 +21,10 @@
   font-weight: 500;
   grid-area: title;
   margin: 0;
+  padding: 0;
   white-space: nonwrap;
   max-width: fit-content;
+  font-family: "Inter", Arial, sans-serif;
 }
 .profile__edit-button {
   background: transparent url(../images/pencil\ 10x10.svg) center no-repeat;
@@ -51,16 +53,6 @@
 
 .profile__add-button:hover {
   opacity: 0.6;
-}
-.profile__title {
-  grid-area: title;
-  max-width: fit-content;
-  padding: 0;
-  margin: 0;
-  font-size: 42px;
-  line-height: 48px;
-  font-weight: 500;
-  font-family: "Inter", Arial, sans-serif;
 }
 .profile__description {
   font-size: 18px;

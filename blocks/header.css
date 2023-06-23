@@ -1,14 +1,12 @@
 .header {
-  margin-top: 45px;
+  margin: 45px 0 0 0;
+  border-bottom: 1px solid #545454;
 }
 .header__logo {
   margin: 0 0 41px 0;
   height: 33px;
   width: 173px;
-}
-.header__line-break {
-  border-bottom: 1px solid #545454;
-  opacity: 0.7;
+  color: #ffff;
 }
 
 @media (min-width: 100px) and (max-width: 320px) {
@@ -16,5 +14,9 @@
     object-fit: cover;
     height: 24px;
     width: 126px;
+    margin: 0 0 28px 5px;
+  }
+  .header {
+    margin-top: 22px;
   }
 }

@@ -1,4 +1,4 @@
-.card__list {
+.card__template {
   display: flex;
   border-radius: 10px;
   flex-direction: column;
@@ -13,7 +13,7 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(282px, max-content));
   grid-gap: 20px 17px;
-  padding-top: 47.25px;
+  padding-top: 36px;
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
@@ -33,7 +33,6 @@
   color: black;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 10px;
 }
 .card__title {
   text-overflow: ellipsis;
@@ -43,11 +42,13 @@
   font-weight: 900;
   font-size: 24px;
   line-height: 29.05px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .card__like-button {
   background: transparent url(../images/Heart.svg) center no-repeat;
-  width: 21px;
+  width: 24px;
   height: 18px;
   border-style: none;
   transition: opacity 370ms ease;

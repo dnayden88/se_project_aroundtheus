@@ -10,7 +10,7 @@
     "title  button"
     "description description";
   grid-template-columns: minmax(auto, 373px) auto;
-  grid-gap: 7px 18px;
+  grid-gap: 7px 10px;
   align-items: center;
 }
 .profile__title {
@@ -75,7 +75,6 @@
   border-radius: 50%;
   object-fit: cover;
   background-position: center;
-  margin-right: 24px;
 }
 
 @media (min-width: 100px) and (max-width: 379px) {
@@ -90,7 +89,7 @@
     flex-wrap: wrap;
   }
   .profile__title {
-    margin: 28.25px 0 0 40px;
+    margin: 20.25px 0 0 40px;
     font-size: 22px;
     text-align: center;
   }
@@ -104,14 +103,11 @@
     width: 18px;
     height: 18px;
     align-self: center;
-    margin: 28.25px 0 0 0;
+    margin: 20.25px 0 0 0;
   }
   .profile__add-button {
     margin: 36px 0 0 0;
     width: 282px;
-  }
-  .profile__image {
-    margin: 0 auto;
   }
 }
 @media (min-width: 380px) and (max-width: 760px) {

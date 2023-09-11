@@ -13,7 +13,7 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(282px, max-content));
   grid-gap: 20px 17px;
-  padding-top: 36px;
+  padding-top: 47.25px;
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
@@ -44,6 +44,7 @@
   line-height: 29.05px;
   margin-top: 0;
   margin-bottom: 0;
+  max-width: 216px;
 }
 
 .card__like-button {
@@ -57,4 +58,9 @@
 .card__like-button:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+@media (min-width: 100px) and (max-width: 919px) {
+  .card__gallery {
+    justify-content: center;
+  }
 }

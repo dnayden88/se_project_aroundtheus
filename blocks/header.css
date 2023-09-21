@@ -1,6 +1,5 @@
 .header {
   padding: 45px 0 44.25px 0;
-  margin: 0;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 .header__logo {
@@ -16,9 +15,8 @@
     width: 126px;
   }
   .header {
-    padding: 28px 0 32px 17px;
-    /*padding: calc(27.68px + 0.032vw) 0 calc(26.968px + 0.032vw)*/
-    /* calc(31.968px + 0.032vw)*/
+    padding: 28px 0 32px 27px;
+    box-sizing: border-box;
   }
 }
 @media (min-width: 1300px) and (max-width: 8000px) {

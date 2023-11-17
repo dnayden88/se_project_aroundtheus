@@ -1,12 +1,12 @@
 {
   "folders": [
-	{
-		"path": "../../se_project_coffeeshop"
-	},
-	{
-		"path": ".."
-	}
-],
+    {
+      "path": "../../se_project_coffeeshop"
+    },
+    {
+      "path": ".."
+    }
+  ],
   "settings": {
     "files.autoSave": "onFocusChange",
     "liveServer.settings.multiRootWorkspaceName": "se_project_aroundtheus"

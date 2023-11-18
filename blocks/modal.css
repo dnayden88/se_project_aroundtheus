@@ -10,7 +10,7 @@
   display: none;
   /*display: flex; */
 }
-.modal__opened {
+.modal_opened {
   display: flex;
 }
 

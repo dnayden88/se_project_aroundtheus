@@ -42,99 +42,7 @@
           ></button>
         </section>
         <section class="card page__section">
-          <ul class="card__gallery">
-            <li class="card__template">
-              <img
-                src="./images/yosemite.jpg"
-                alt="yosemite valley"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Yosemite Valley</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-
-            <li class="card__template">
-              <img
-                src="./images/lake-louise.jpg"
-                alt="lake-louise"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lake Louise</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card__template">
-              <img
-                src="./images/bald-mountains.jpg"
-                alt="Bald Mountains"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Bald Mountains</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card__template">
-              <img
-                src="./images/latemar.jpg"
-                alt="Latemar"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Latemar</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card__template">
-              <img
-                src="./images/vanoise.jpg"
-                alt="Vanoise National Park"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Vanoise National Park</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card__template">
-              <img
-                src="./images/lago.jpg"
-                alt="Lago di Braies"
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title">Lago di Braies</h2>
-                <button
-                  aria-label="like"
-                  type="button"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="card__gallery"></ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -143,7 +51,7 @@
     </div>
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <form class="modal__form">
+        <form class="modal__form" id="modal-form">
           <h1 class="modal__heading">Edit Profile</h1>
 
           <input
@@ -173,6 +81,19 @@
         </form>
       </div>
     </div>
+    <template id="template">
+      <li class="card__template">
+        <img src="" alt="" class="card__image" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button
+            aria-label="like"
+            type="button"
+            class="card__like-button"
+          ></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

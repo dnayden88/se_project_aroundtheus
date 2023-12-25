@@ -39,9 +39,6 @@ const profileEditForm = profileEditModal.querySelector(
 const template = document.querySelector("#template").content;
 const cardListEl = document.querySelector(".card__gallery");
 
-function closeModal() {
-  profileEditModal.classList.remove("modal_opened");
-}
 function openModal() {
   profileEditModal.classList.add("modal_opened");
 }
@@ -62,9 +59,18 @@ profileEditBtn.addEventListener("click", () => {
   //set input fields to have the value, text content pulls the text from profileName and profileDescription
 });
 
+function closeModal() {
+  profileEditModal.classList.remove("modal_opened");
+}
+
 profileEditForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   openEditProfileModal();
+  closeModal();
+});
+
+profileCloseBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
   closeModal();
 });
 

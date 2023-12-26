@@ -48,7 +48,7 @@ function fillProfileForm() {
   jobInput.value = profileJob.textContent;
 }
 
-function openEditProfileModal() {
+function fillProfileInfo() {
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
 }
@@ -65,12 +65,11 @@ function closeModal() {
 
 profileEditForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  openEditProfileModal();
+  fillProfileInfo();
   closeModal();
 });
 
-profileCloseBtn.addEventListener("click", (evt) => {
-  evt.preventDefault();
+profileCloseBtn.addEventListener("click", () => {
   closeModal();
 });
 

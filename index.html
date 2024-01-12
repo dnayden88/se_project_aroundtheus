@@ -39,6 +39,7 @@
             aria-label="add"
             type="button"
             class="profile__add-button"
+            id="profile__add-button"
           ></button>
         </section>
         <section class="card page__section">
@@ -49,7 +50,7 @@
         <p class="footer__copyright">&copy; Around the U.S.</p>
       </footer>
     </div>
-    <div class="modal" id="profile-edit-modal">
+    <div class="modal" id="profile-edit-modal" > 
       <div class="modal__container">
         <form class="modal__form" id="profile-edit-modal-form">
           <h3 class="modal__heading">Edit Profile</h3>
@@ -91,10 +92,35 @@
             aria-label="like"
             type="button"
             class="card__like-button"
+            id="card__like-button"
+            oneClick="buttonClick(this)"
           ></button>
         </div>
       </li>
     </template>
+    <div class="modal" id="card-edit-modal" >
+      <div class="modal__container">
+        <form class="modal__form" id="card-edit-modal-form"></form>
+        <h3 class="modal__heading">New Place</h3>
+        <input
+          type="text"
+          class="modal__input"
+          id="card-title-input"
+          name="title"
+          placeholder="Title"
+          required
+        />
+        <input type="url" class="modal__input" name="url" id="card-edit-image-url" placeholder="Image URL" pattern="https://.* " required></input>
+        <button type="submit" class="modal__button">Create</button>
+        <button
+          type="button"
+          class="modal__close modal__close_button"
+          id="card-edit-close-button"
+          aria-label="close"
+        ></button>
+        
+      </div>
+    </div>
     <script src="./scripts/index.js" defer></script>
   </body>
 </html>

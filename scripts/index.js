@@ -46,66 +46,52 @@ const cardTitle = document.querySelector("#card-title-input");
 const cardUrl = document.querySelector("#card-edit-image-url");
 const cardOpenBtn = document.querySelector("#profile__add-button");
 const cardCloseBtn = document.querySelector("#card-edit-close-button");
+const cardCreateBtn = document.querySelector("#card-edit-create-button");
+//const initialCardTitle = Object.values(initialCards)[0].name;
+//access the title of first object inside of the array
+//const initialCardImage = Object.values(initialCards)[0].link;
+//access the image of the first object inside of the array
 
-function openModalProfile() {
-  profileEditModal.classList.add("modal_opened");
-
-  //editModal.classList.add("modal_opened");
-  //cardEditModal.classList.add("modal_opened"); produced two overlapping modals
-}
-function openModalCardEdit() {
-  cardEditModal.classList.add("modal_opened");
-}
+const openModal = (modal) => {
+  modal.classList.add("modal_opened");
+};
 
 function fillProfileForm() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
 
-function fillCardEditForm() {}
 function fillProfileInfo() {
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
 }
 
 profileEditBtn.addEventListener("click", () => {
-  openModalProfile();
+  openModal(profileEditModal);
   fillProfileForm();
   //set input fields to have the value, text content pulls the text from profileName and profileDescription
 });
 
 cardOpenBtn.addEventListener("click", () => {
-  openModalCardEdit();
+  openModal(cardEditModal);
 });
 
-//function closeModal() {
-//editModal.classList.remove("modal_opened");
-//}
-function closeModalProfile() {
-  profileEditModal.classList.remove("modal_opened");
-}
-
-function closeModalCardEdit() {
-  cardEditModal.classList.remove("modal_opened");
-}
-
-cardCloseBtn.addEventListener("submit", (evt) => {
+const closeModal = (modal) => {
+  modal.classList.remove("modal_opened");
+};
+cardCloseBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
-  closeModalCardEdit();
-});
-
-cardCloseBtn.addEventListener("click", () => {
-  closeModalCardEdit();
+  closeModal(cardEditModal);
 });
 
 profileEditForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   fillProfileInfo();
-  closeModalProfile();
+  closeModal(profileEditModal);
 });
 
 profileCloseBtn.addEventListener("click", () => {
-  closeModalProfile();
+  closeModal(profileEditModal);
 });
 
 function getCardElement(cardData) {
@@ -130,3 +116,23 @@ likeButtons.forEach((likeButton) => {
     likeButton.classList.toggle("card__like-button_active");
   });
 });
+
+//function fillCardEditForm() {
+//initialCardTitle = cardTitle.textContent;
+//initialCardImage = cardUrl.textContent;
+//}
+//function fillCardEditInfo() {
+//cardTitle.textContent = initialCardTitle;
+// cardUrl.textContent = initialCardImage;} //trying to prefill the card edit modal with data from the array
+
+cardCreateBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  closeModal(cardEditModal);
+});
+//the cardElement, does this exist outside of the getCardElement(cardData)?
+//how to add an object to the array of objects inititalCards? (through the modal form)?
+//the modal form needs to collect information (name, and link), then put it in the array as a new object.
+//cannot use the push() method because it will add the object to the end of the array NOT the beginning.
+//splice method ()https://www.programiz.com/javascript/examples/append-object-array
+//the trash can icon needs to delete ANY object from the array. The trash can icon will need to have a function
+//that will listen to the "click" event, then it needs to loop through the objects of the array and whatever is now "false" (click === false), needs to be removed?
